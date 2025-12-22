@@ -2,6 +2,7 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
+vim.cmd("set number")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -87,7 +88,7 @@ local telescope = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', telescope.find_files, { desc = 'Telescope find files'})
 vim.keymap.set('n', '<leader>gg', telescope.live_grep, { desc = 'Telescope live grep'})
 vim.keymap.set('n', '<leader>ss', telescope.grep_string, {desc = 'Telescope grep string'})
-vim.keymap.set('n', '<leader>t', '<C-w>s<C-w>j:resize -10<CR>:terminal<CR>', { desc = 'Open terminal'})
+vim.keymap.set('n', '<leader>t', '<C-w>s<C-w>j:resize -14<CR>:terminal<CR>', { desc = 'Open terminal'})
 vim.keymap.set('n', '<leader>N', '<C-w>v', { desc = 'Open new window vertically'})
 vim.keymap.set('n', '<leader>C', '<C-w>c', { desc = 'Close window'})
 vim.keymap.set('n', '<C-Right>', '<C-w>l', { desc = 'Move to right window'})
