@@ -85,9 +85,10 @@ local telescope = require('telescope.builtin')
 
 --Custom Keymappings
 --Normal mode
+vim.keymap.set('n', '<leader>ft', ':Neotree filesystem reveal left<CR>', { desc = 'Open filetree'})
 vim.keymap.set('n', '<leader>ff', telescope.find_files, { desc = 'Telescope find files'})
-vim.keymap.set('n', '<leader>gg', telescope.live_grep, { desc = 'Telescope live grep'})
-vim.keymap.set('n', '<leader>ss', telescope.grep_string, {desc = 'Telescope grep string'})
+vim.keymap.set('n', '<C-f>', telescope.live_grep, { desc = 'Telescope live grep'})
+vim.keymap.set('n', '<leader>gg', telescope.grep_string, {desc = 'Telescope grep string'})
 vim.keymap.set('n', '<leader>t', '<C-w>s<C-w>j:resize -14<CR>:terminal<CR>', { desc = 'Open terminal'})
 vim.keymap.set('n', '<leader>N', '<C-w>v', { desc = 'Open new window vertically'})
 vim.keymap.set('n', '<leader>C', '<C-w>c', { desc = 'Close window'})
@@ -104,10 +105,13 @@ vim.keymap.set('n','<S-Tab>','<<', {desc = "Indent"})
 
 --Insert mode
 vim.keymap.set('i', '<S-Tab>', '<C-d>', {desc = "Unindent"})
+vim.keymap.set('i', '<C-z>', '<C-o>u', {desc = "Undo"})
+vim.keymap.set('i', '<C-d>', '<C-o>dd', {desc = "Delete line"})
 
 --Visual mode
 vim.keymap.set('v', '<S-Tab>', '<gv', {desc = "Unindent and reselect"})
 vim.keymap.set('v', '<Tab>', '>gv', {desc = "Indent and reselect"})
+vim.keymap.set('v', '<C-c>', '"+y', {desc = "Copy to clipboard"})
 
 
 --Terminal mode,
