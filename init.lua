@@ -143,6 +143,7 @@ vim.keymap.set('n', '<A-Right>', ':vertical resize -2<CR>', { desc = 'Increase w
 vim.keymap.set('n', '<A-Left>', ':vertical resize +2<CR>', { desc = 'Decrease width'})
 vim.keymap.set('n','<Tab>', '>>', {desc = "Indent"})
 vim.keymap.set('n','<S-Tab>','<<', {desc = "Indent"})
+vim.keymap.set('n', '<leader>r', ':%s///gc<Left><Left><Left><Left>', { desc = 'Search & replace (whole file, confirm)' })
 
 --Insert mode
 vim.keymap.set('i', '<S-Tab>', '<C-d>', {desc = "Unindent"})
@@ -153,7 +154,7 @@ vim.keymap.set('i', '<C-d>', '<C-o>dd', {desc = "Delete line"})
 vim.keymap.set('v', '<S-Tab>', '<gv', {desc = "Unindent and reselect"})
 vim.keymap.set('v', '<Tab>', '>gv', {desc = "Indent and reselect"})
 vim.keymap.set('v', '<C-c>', '"+y', {desc = "Copy to clipboard"})
-
+vim.keymap.set('v', '<leader>r', ":'<,'>s///gc<Left><Left><Left>", { desc = 'Search & replace (selection, confirm)' })
 
 --Terminal mode,
 vim.keymap.set('t', '<Esc>','<C-\\><C-n>', { desc = 'Close terminal' })
